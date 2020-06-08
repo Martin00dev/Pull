@@ -43,303 +43,798 @@
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/bleu.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
+<!-- wrapper -->
+<div id="wrapper">
 
-	<!-- boxed = boxed layout --><!-- 888
-		AVAILABLE BODY CLASSES:
-		
-		smoothscroll 			= create a browser smooth scroll
-		enable-animation		= enable WOW animations
+	<!-- 
+		AVAILABLE HEADER CLASSES
 
-		bg-grey					= grey background
-		grain-grey				= grey grain background
-		grain-blue				= blue grain background
-		grain-green				= green grain background
-		grain-blue				= blue grain background
-		grain-orange			= orange grain background
-		grain-yellow			= yellow grain background
+		Default nav height: 96px
+		.header-md 		= 70px nav height
+		.header-sm 		= 60px nav height
+
+		.b-0 		= remove bottom border (only with transparent use)
+		.transparent	= transparent header
+		.translucent	= translucent header
+		.sticky			= sticky header
+		.static			= static header
+		.dark			= dark header
+		.bottom			= header on bottom
 		
-		boxed 					= boxed layout
-		pattern1 ... patern11	= pattern background
-		menu-vertical-hide		= hidden, open on click
-		
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="assets/images/_smarty/boxed_background/1.jpg"
+		shadow-before-1 = shadow 1 header top
+		shadow-after-1 	= shadow 1 header bottom
+		shadow-before-2 = shadow 2 header top
+		shadow-after-2 	= shadow 2 header bottom
+		shadow-before-3 = shadow 3 header top
+		shadow-after-3 	= shadow 3 header bottom
+
+		.clearfix		= required for mobile menu, do not remove!
+
+		Example Usage:  class="clearfix sticky header-sm transparent b-0"
 	-->
-	<body class="smoothscroll enable-animation">
+	<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
-		<!-- SLIDE TOP -->
-		<div id="slidetop">
-
+		<!-- TOP NAV -->
+		<header id="topNav">
 			<div class="container">
-				
-				<div class="row">
 
-					<div class="col-md-4">
-						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
-					</div>
+				<!-- Mobile Menu Button -->
+				<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
 
-					<div class="col-md-4">
-						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
-						<ul class="list-unstyled">
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
-						</ul>
-					</div>
+				<!-- Logo -->
+				<a class="logo float-left scrollTo" href="#top">
+					<img src="assets/images/_smarty/logo_dark.png" alt="" />
+				</a>
 
-					<div class="col-md-4">
-						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
-						<ul class="list-unstyled">
-							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
-							<li><b>Phone:</b> 1-800-565-2390</li>
-							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
-						</ul>
-					</div>
-
-				</div>
-
-			</div>
-
-			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
-
-		</div>
-		<!-- /SLIDE TOP -->
-
-
-		<!-- wrapper -->
-		<div id="wrapper">
-
-			<!-- 
-				AVAILABLE HEADER CLASSES
-
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-				
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent b-0"
-			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
-
-				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="container">
-
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
-
-						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
-							<img src="assets/images/_smarty/logo_dark.png" alt="" />
-						</a>
+				<!-- 
+					Top Nav 
+					
+					AVAILABLE CLASSES:
+					submenu-dark = dark sub menu
+				-->
+				<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+					<nav class="nav-main">
 
 						<!-- 
-							Top Nav 
+							.nav-onepage
+							Required for onepage navigation links
 							
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
+							Add .external for an external link!
 						-->
-						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-							<nav class="nav-main">
-
-								<!-- 
-									.nav-onepage
-									Required for onepage navigation links
-									
-									Add .external for an external link!
-								-->
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="#home">
-											HOME
-										</a>
-									</li>
-									<li class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#services">Services <span class="caret"></span></a>
-										<ul class="dropdown-menu">
-										  <li><a href="#services">Residential</a></li>
-										  <li><a href="#services">Corporations</a></li>
-										</ul>
-									  </li>
-									  <li><!-- Portfolio -->
-										<a href="#news">
-											Portfolio
-										</a>
-									</li>
-									
-									<li><!-- NEWS -->
-										<a href="#news">
-											News
-										</a>
-									</li>
-									<li><!-- Clients -->
-										<a href="#news">
-											Clients
-										</a>
-									</li>					
-									
-									<li><!-- CONTACT -->
-										<a href="#contact">
-											Contact
-										</a>
-									</li>
+						<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+							<li class="active"><!-- HOME -->
+								<a href="#home">
+									HOME
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#services">Services <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+								  <li><a href="/Smarty/HTML_BS4/res.html">Residential</a></li>
+								  <li><a href="/Smarty/HTML_BS4/corp.html">Corporations</a></li>
 								</ul>
-
-							</nav>
-						</div>
-
-					</div>
-				</header>
-				<!-- /Top Nav -->
-
-			</div>
-
-
-
-
-			<!-- FOOTER -->
-			<footer id="footer">
-				<div class="container">
-
-
-					<div class="row">
-
-						<!-- col #1 -->
-						<div class="col-md-8">
-
-							<h3 class="letter-spacing-1">WHY US?</h3>
-
-							<!-- Small Description -->
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.
-							</p>
-							<h2>(800) 123-4567</h2>
-						</div>
-						<!-- /col #1 -->
-
-						<!-- col #2 -->
-						<div class="col-md-4">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-
-							<!-- Newsletter Form -->
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
-							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-							<!-- /Newsletter Form -->
-
-
-						</div>
-						<!-- /col #2 -->
-
-					</div>
-
-
-				</div>
-
-				<div class="copyright">
-					<div class="container">
-						<ul class="float-right m-0 list-inline mobile-block">
-							<li><a href="#">Terms &amp; Conditions</a></li>
-							<li>&bull;</li>
-							<li><a href="#">Privacy</a></li>
+							  </li>
+							  <li><!-- Portfolio -->
+								<a href="#winner">
+									Portfolio
+								</a>
+							</li>
+							
+							<li><!-- NEWS -->
+								<a href="/Smarty/HTML_BS4/index.html#news">
+									News
+								</a>
+							</li>
+							<li><!-- Clients -->
+								<a href="/Smarty/HTML_BS4/index.html#dark">
+									Clients
+								</a>
+							</li>					
+							
+							<li><!-- CONTACT -->
+								<a href="/Smarty/HTML_BS4/index.html#contact">
+									Contact
+								</a>
+							</li>
 						</ul>
-						&copy; All Rights Reserved, Company LTD
-					</div>
+
+					</nav>
 				</div>
 
-			</footer>
-			<!-- /FOOTER -->
-
-		</div>
-		<!-- /wrapper -->
-
-
-		<!-- SCROLL TO TOP -->
-		<a href="#" id="toTop"></a>
-
-
-		<!-- PRELOADER -->
-		<div id="preloader">
-			<div class="inner">
-				<span class="loader"></span>
 			</div>
-		</div><!-- /PRELOADER -->
+		</header>
+		<!-- /Top Nav -->
+
+	</div>
 
 
-		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
-		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
-		<script src="assets/js/scripts.js"></script>
+
+
+
+<br>
+							<h1>			Submission form</h1> <br><br>
+<!--<p>First, select a type of service</p> -->
+<!--
+<p  id="menu"> 
+<br>  -->
+<p> <strong>First, select the type of service in the list below</strong> </p><p> 
+ 
+
+<select id="mySelect" onchange="TriEnlever()">
+    <option> </option>
+    <option>Residential</option>
+    <option>Commercial</option>
+    <option>Corporate</option>
+    <option>Hybrid</option>
+  </select>
+
+
+  
+
+
+  
+
+<!--
+<button onclick="TriEnlever()">Affiche l'option choisie du menu     </button>
+-->
+<br><br>
+ 
+
+ <!-- document.getElementById("menu").innerHTML = x.options[i].text;  (mettre après: var i = x.selectedIndex;
+   de la fonction ci-dessous: function MaFonctionDeSelection() {    -->
+<script>
+function MaFonctionDeSelection() {
+    var x = document.getElementById("mySelect");
+    var i = x.selectedIndex;
+  
+    return i;
+}
+</script>
+<!--
+<button type="button" onclick="TriEnlever()">Choisi le div </button> 
+ -->
+ 
+ 
+ 
+ 
+</p><div id="myDIV_1" style="display: block;">
+Enter the number of the appartements<br>
+
+ <input id="NberAppartement" type="number" name="" value="" oninput="Call()" onkeyup="Call()">   
+</div>
+
+<div id="myDIV_2" style="display: block;">
+Enter the number of the floors<br>
+
+ <input id="NbreFloor" type="number" name="" value="" oninput="Call()" onkeyup="Call()"> 
+</div>
+
+<div id="myDIV_3" style="display: block;">
+Enter the number of the basements<br>
+
+ <input id="NbreBasements" type="number" name="" value="" oninput="Call()" onkeyup="Call()">  
+</div> 
+
+<div id="myDIV_4" style="display: none;">
+Enter the number of the separate businesses<br>
+
+ <input id="NbreSeparateBusiness" type="number" name="" value="" oninput="Call()" onkeyup="Call()">    
+</div>
+
+<div id="myDIV_5" style="display: none;">
+Enter the number of parking available<br>
+
+ <input id="NbreParking" type="number" name="" value="" oninput="Call()" onkeyup="Call()"> 
+</div>
+
+<div id="myDIV_6" style="display: none;">
+Enter the number of lift cages to deploy<br>
+
+ <input id="NberCage" type="number" name="" value="" oninput="Call()" onkeyup="Call()">   
+</div>
+
+<div id="myDIV_7" style="display: none;">
+Enter the number of separate rental companies<br>
+ <input id="NbreRentalCompagnies" type="number" name="" value="" oninput="Call()" onkeyup="Call()">   
+</div>
+
+<div id="myDIV_8" style="display: none;">
+Enter the number of occupants per floor<br>
+
+ <input id="NbreMaxPersonByfloor" type="number" name="" value="" input="Call()" onkeyup="Call()">   
+</div>
+
+<div id="myDIV_9" style="display: none;">
+Enter the number of hours of activity of the building<br>
+
+ <input id="NbreHoursActivity" type="number" name="" value="" input="Call()" onkeyup="Call()">   
+</div>
+
+<div id="myDIV_10" style="display: block;">
+<br>
+
+The number of elevators you need: <input id="ResultatAscenseur" type="number" name="" value="" disabled="">   
+</div>
+<br>
+  <p><strong>Second, chose the quality of the elevator below</strong></p>
+  <input id="PriceUnitStandard" type="radio" name="services" value="standard" onchange="Price()"> Standard<br>
+  <input id="PriceUnitPremium" type="radio" name="services" value="premium" onchange="Price()"> Premium<br>
+  <input id="PriceUnitExcelium" type="radio" name="services" value="other" onchange="Price()"> Excelium<br><br>
+
+  <br>Price of an elevator $: <input id="PriceUnit" type="text" disabled="">
+  <br>Installation costs $: <input id="InstallationCost" type="text" disabled="">
+  <br>Total cost $: <input id="TotalCost" type="text" disabled="">
+
+
+
+
+
+  <!--
+<button type="button" onclick="removeElement()">Fait disparaitre </button> 
+<br>
+<button onclick="resetElement()">Reset All      </button>
+<br>
+<button onclick="ApparaitouDisparait()">Apparait_et_Disparait </button>
+-->  
+ <br>   
+ <p id="demo2"></p>
+
+ 
+ <!--
+<script>
+function removeElement() {
+    document.getElementById("myDIV_1").style.display = "none";
+}
+</script>
+
+
+<script>
+function resetElement() {
+ 
+   		document.getElementById("myDIV_1").style.display = "block"; 
+}
+</script>
+
+
+<script>
+function ApparaitouDisparait(){
+    var x = document.getElementById('myDIV_1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+
+-->
+
+<!-- Fonctions qui ajoute les champs du formulaire de soumission selon
+le choix dans le menu déroulant (Rés., Com., Corp., ou Hybride) en fonctions des
+paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
+
+
+
+
+<script> 	
+	
+	function Call()  {
+   		FormulesSelected();
+		  
+   
+					 }</script>
+
+
+<script>
+
+
+	function FormulesSelected()  {
+	
+   var service =  MaFonctionDeSelection();  
+   
+   
+   if ( service == 1 )
+   {
+	  ResultNumberResidentialElevators(); 
+   }
+   
+   if ( service == 2 )
+   {
+	  ResultNumberCommercialElevators(); 
+	  
+   }
+   
+   if ( service == 3 )
+   {
+	  ResultNumberCorporateElevators(); 
+   }
+   
+   if ( service == 4 )
+   {
+	  ResultNumberCorporateElevators(); 
+   }
+   
+   
+   
+}
+</script>
+
+<!--Formule  Residentiel Nombre Ascenseurs -->
+<script>
+	function ResultNumberResidentialElevators() {
+	   
 		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+	
+		var x = document.getElementById("NberAppartement").value || 0 ;
+		var y = document.getElementById("NbreFloor").value || 0 ;
+		var z = document.getElementById("NbreBasements").value || 0;
+		var Nber = Math.ceil( x /(y*6) ); 
+			  
+			   
+		var colonne =  Math.ceil(y /20);
+		  
+		var  NberElevators = Nber*colonne;
+		if (x != 0  && y != 0   && z  != 0  )
+		{document.getElementById("ResultatAscenseur").value= NberElevators;}
+		else {
+				document.getElementById("ResultatAscenseur").value = 0;
+			    }
+		
+		return NberElevators;
+	
+	}
+	</script>
 
-		<!-- REVOLUTION SLIDER -->
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="assets/js/view/demo.revolution_slider.js"></script>
+<!--Formule  Commercial Nombre Ascenseurs -->
+<script>
+	function ResultNumberCommercialElevators() {
+		       var c5 =   document.getElementById ("NbreParking").value || 0 ;
+			   var  b =   document.getElementById ("NbreBasements").value || 0 ;
+			   var  f =   document.getElementById (	"NbreFloor").value 	|| 0 ;
+			   var  c4 =   document.getElementById ("NbreSeparateBusiness").value ||  0 ;
 
-		<!-- PAGELEVEL SCRIPTS -->
-		<script src="assets/js/contact.js"></script>
+			    var x = document.getElementById("NberCage").value || 0;
+			
+			if (c5 != 0  && b != 0   && f  != 0  &&  c4 != 0      )
+			 {document.getElementById("ResultatAscenseur").value = x;}
+	        else {
+				document.getElementById("ResultatAscenseur").value = 0;
+			    }
+				return x;
+		}												
+</script>
 
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="assets/plugins/gmaps.js"></script>
-		<script>
+<!--Formule  Corporate et Hybride Nombre Ascenseurs -->
+<script>
+	function ResultNumberCorporateElevators() {
+	   service = MaFonctionDeSelection();
 
-			jQuery(document).ready(function(){
+		var Fc =  document.getElementById("NbreFloor").value  || 0 ;
+		var F = Number(document.getElementById("NbreFloor").value || 0  );
+		
+		var Bc =   document.getElementById("NbreBasements").value;
+		var B = Number(document.getElementById("NbreBasements").value || 0 );
 
-				/**
-					@BASIC GOOGLE MAP
-				**/
-				var map2 = new GMaps({
-					div: '#map2',
-					lat: -12.043333,
-					lng: -77.028333,
-					scrollwheel: false
-				});
+		var M = document.getElementById("NbreMaxPersonByfloor").value || 0 ;
+		var SB = document.getElementById("NbreSeparateBusiness").value || 0 ;
+		var P = document.getElementById("NbreParking").value || 0 ;
+		var H = document.getElementById("NbreHoursActivity").value || 0 ;
+		var R = document.getElementById("NbreRentalCompagnies").value || 0 ;
+	   
+	   
+		var Nber = Math.ceil( M*(F+B)/1000 ); 
+		
+												
+		var colonne =  Math.ceil((F+B)/20);
+	 
+		var NberResultElevatorsByCol =  Math.ceil(Nber/colonne);
+	   
+		var NberElevators=   NberResultElevatorsByCol*colonne;        
+		console.log(service);
+		
+		
+			 document.getElementById("ResultatAscenseur").value = NberElevators;  
+	   
+		
+			
 
-				var marker = map2.addMarker({
-					lat: -12.043333,
-					lng: -77.028333,
-					title: 'Company, Inc.'
-				});
+		
+		
+		
+		
+		return NberElevators;
+	
+	}
+	</script>
 
-			});
+	<!-- Prix unitaire ascenseur et  cout installation mettre soit Residential 
+    ou Commercial sur ResulNumberResidentialElevators() -->
 
-		</script>
-	</body>
+<script>
+	function Price()  {
+		 var service = MaFonctionDeSelection();
+		 
+		 
+		 if (service == 1)  {
+		 var NumberCorporateElevators = ResultNumberResidentialElevators();
+											}
+		 if (service == 2)  {
+		 var NumberCorporateElevators = ResultNumberCommercialElevators();
+											}									
+
+		 if (service == 3 || service == 4 )  {
+		 var NumberCorporateElevators = ResultNumberCorporateElevators();
+											 }
+		 
+											
+											
+											
+		 var PriceInstallElevators;							   
+		 var TotalCost;
+		 
+		
+		 
+		 
+		 if  (document.getElementById("PriceUnitStandard").checked) { 
+	   
+		 
+		 
+		 document.getElementById("PriceUnit").value="7565.00";
+		 PriceInstallElevators =  7565*0.10*NumberCorporateElevators;
+		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
+		
+		 
+		 TotalCost = 7565*1.1*NumberCorporateElevators;
+		 TotalCost = TotalCost.toFixed(2);
+										 
+		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
+		document.getElementById("TotalCost").value = TotalCost;
+							} 
+		 
+		 if  (document.getElementById("PriceUnitPremium").checked)	{ 		               
+		 document.getElementById("PriceUnit").value="12345.00"; 
+		 PriceInstallElevators =  12345*0.13*NumberCorporateElevators;
+		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
+		 
+		 
+		 TotalCost = 7565*1.13*NumberCorporateElevators;
+		 TotalCost = TotalCost.toFixed(2);
+									   
+		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
+		 document.getElementById("TotalCost").value = TotalCost;
+							}
+				
+		 if  (document.getElementById("PriceUnitExcelium").checked)	{ 	
+		 
+		 document.getElementById("PriceUnit").value="15400.00"; 
+		 PriceInstallElevators =  15400*0.16*NumberCorporateElevators;
+		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
+		
+		 
+		 TotalCost = 7565*1.16*NumberCorporateElevators;
+		 TotalCost = TotalCost.toFixed(2);
+										 
+		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
+		document.getElementById("TotalCost").value = TotalCost;
+								 }
+				
+				
+	
+	}
+	</script>
+	
+	
+
+<script>
+function AddElementDiv1() {
+    document.getElementById("myDIV_1").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv2() {
+    document.getElementById("myDIV_2").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv3() {
+    document.getElementById("myDIV_3").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv4() {
+    document.getElementById("myDIV_4").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv5() {
+    document.getElementById("myDIV_5").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv6() {
+    document.getElementById("myDIV_6").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv7() {
+    document.getElementById("myDIV_7").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv8() {
+    document.getElementById("myDIV_8").style.display = "block";
+}
+</script>
+
+<script>
+function AddElementDiv9() {
+    document.getElementById("myDIV_9").style.display = "block";
+}
+</script>
+
+<script>
+	function AddElementDiv10() {
+		document.getElementById("myDIV_10").style.display = "block";
+	}
+</script>
+
+
+<!-- Fonctions qui suppriment les champs du formulaire de soumission selon
+le choix dans le menu déroulant (Rés., Com., Corp., ou Hybride) en fonctions des
+paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
+
+<script>
+function RemoveElementDiv1() {
+    document.getElementById("myDIV_1").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv2() {
+    document.getElementById("myDIV_2").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv3() {
+    document.getElementById("myDIV_3").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv4() {
+    document.getElementById("myDIV_4").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv5() {
+    document.getElementById("myDIV_5").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv6() {
+    document.getElementById("myDIV_6").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv7() {
+    document.getElementById("myDIV_7").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv8() {
+    document.getElementById("myDIV_8").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv9() {
+    document.getElementById("myDIV_9").style.display = "none";
+}
+</script>
+
+<script>
+function RemoveElementDiv10() {
+    document.getElementById("myDIV_10").style.display = "none";
+}
+</script>
+
+
+
+<!-- Selon la sélection du menu déroulant (Rés., Com., Corp., ou Hybride)  les 
+champs de leurs paramètres vont apparaîtres avec l'appel des fonctions  
+'AddElementDiv() et RemoveElementDiv2(). Par défaut dans le fichier .css leur 
+valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: none; -->
+
+<script>
+	function TriEnlever( )
+ {
+    
+    
+    if (MaFonctionDeSelection()  === 0)  {
+         
+         
+        
+         RemoveElementDiv1();
+         RemoveElementDiv2();
+         RemoveElementDiv3();
+         RemoveElementDiv4();
+         RemoveElementDiv5();
+         RemoveElementDiv6();
+         RemoveElementDiv7();
+         RemoveElementDiv8();
+         RemoveElementDiv9(); 
+		 RemoveElementDiv10(); 								}  
+    
+    if	(MaFonctionDeSelection() === 1)	{
+        
+    				
+        AddElementDiv1();
+        AddElementDiv2();
+        AddElementDiv3();
+		AddElementDiv10()
+        RemoveElementDiv4();
+        RemoveElementDiv5();
+        RemoveElementDiv6();
+        RemoveElementDiv7();
+        RemoveElementDiv8();
+        RemoveElementDiv9();            					} 
+                                        
+    if	(MaFonctionDeSelection() === 2)	{
+         
+    	
+        								AddElementDiv4();
+                                        AddElementDiv2();
+                                        AddElementDiv3();
+                                        AddElementDiv5();
+                                        AddElementDiv6();
+										AddElementDiv10();
+                    					RemoveElementDiv1();
+                                        RemoveElementDiv7();
+         								RemoveElementDiv8();
+         								RemoveElementDiv9();}  
+                                
+    if	(MaFonctionDeSelection() === 3)	{
+        
+    							
+                                		AddElementDiv7();
+                                        AddElementDiv2();
+                                        AddElementDiv3();
+                                        AddElementDiv5();
+                                        AddElementDiv8();
+										AddElementDiv10();
+                                		RemoveElementDiv1();
+                                        RemoveElementDiv4();
+         								RemoveElementDiv6();
+         								RemoveElementDiv9();
+                               					}  
+    if	( MaFonctionDeSelection() === 4)	{
+        
+    									
+                                        AddElementDiv4();
+                                        AddElementDiv2();
+                                        AddElementDiv3();
+                                        AddElementDiv5();
+                                        AddElementDiv8();
+                                        AddElementDiv9();
+										AddElementDiv10();
+                                		RemoveElementDiv1();
+                                        RemoveElementDiv6();
+         								RemoveElementDiv7();
+                                        		}
+         								                             
+		document.getElementById("NberAppartement" ).value = ""; 
+		document.getElementById("NbreFloor" ).value = "";
+		document.getElementById("NbreBasements" ).value = ""; 
+		document.getElementById("NbreSeparateBusiness" ).value = "";
+		document.getElementById("NbreParking" ).value = ""; 
+		document.getElementById( "NberCage").value = "";
+		document.getElementById("NbreRentalCompagnies" ).value = ""; 
+		document.getElementById("NbreMaxPersonByfloor"  ).value = "";
+		document.getElementById( "NbreHoursActivity").value = ""; 
+		document.getElementById("ResultatAscenseur" ).value = "";
+
+
+
+
+
+
+}
+</script>
+
+
+<!-- FOOTER -->
+<footer id="footer">
+    <div class="container">
+
+
+        <div class="row">
+
+            <!-- col #1 -->
+            <div class="col-md-8">
+
+                <h3 class="letter-spacing-1">Rocket - Elevate Safety Speed and Style  </h3>
+
+                <!-- Small Description -->
+                
+            </div>
+            <!-- /col #1 -->
+
+            <!-- col #2 -->
+            <div class="col-md-4">
+                <h4 class="letter-spacing-1">4468 Wellington, Verdun, Quebec <br> (581) 701-0303 <br>info@codeboxx.biz</h4>
+
+                
+
+
+            </div>
+            <!-- /col #2 -->
+
+        </div>
+
+
+    </div>
+
+    <div class="copyright">
+        <div class="container">
+            <ul class="float-right m-0 list-inline mobile-block">
+                <li></li>
+                <li></li>
+                <li><a href="#"></a></li>
+            </ul>
+            &copy; All Rights Reserved, Rocket Elevators
+        </div>
+    </div>
+
+</footer>
+<!-- /FOOTER -->
+
+</div>
+<!-- /wrapper -->
+
+
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>
+
+
+<!-- PRELOADER -->
+<div id="preloader">
+<div class="inner">
+    <span class="loader"></span>
+</div>
+</div><!-- /PRELOADER -->
+
+
+<!-- JAVASCRIPT FILES -->
+<script>var plugin_path = 'assets/plugins/';</script>
+<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+<script src="assets/js/scripts.js"></script>
+
+
+
+<!-- REVOLUTION SLIDER -->
+<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+<!-- PAGELEVEL SCRIPTS -->
+<script src="assets/js/contact.js"></script>
+
+
+</body>
 </html>
